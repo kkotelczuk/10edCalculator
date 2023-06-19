@@ -63,7 +63,9 @@ const armies = [
 ];
 
 const concatArrays = (base: any, addition: any, category: string) => {
-  return base.concat(
+  const baseCopy = [...base];
+  baseCopy.push({ id: "category", category });
+  return baseCopy.concat(
     addition.map((item: any) => ({
       ...item,
       id: base.length + item.id,

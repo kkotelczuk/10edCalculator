@@ -42,13 +42,15 @@ export const Calculator = ({
   };
 
   const getMenuItems = () => {
-    let category = "";
     return units
       .sort((a: any, b: any) => a?.category - b?.category)
       .map((item: any) => {
-        if (item?.category !== category) {
-          category = item.category;
-          return <ListSubheader>{item.category}</ListSubheader>;
+        if (item?.id === "category") {
+          return (
+            <ListSubheader key={item.id + item.category}>
+              {item.category}
+            </ListSubheader>
+          );
         }
         return (
           <MenuItem
@@ -60,13 +62,15 @@ export const Calculator = ({
   };
 
   const getEnhancementItems = () => {
-    let category = "";
     return enhancements
       .sort((a: any, b: any) => a?.category - b?.category)
       .map((item: any) => {
-        if (item?.category !== category) {
-          category = item.category;
-          return <ListSubheader>{item.category}</ListSubheader>;
+        if (item?.id === "category") {
+          return (
+            <ListSubheader key={item.id + item.category}>
+              {item.category}
+            </ListSubheader>
+          );
         }
         const isItemUsed = usedEnhanced.find(
           (enhancement) => enhancement === item.id
