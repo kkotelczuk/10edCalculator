@@ -8,9 +8,12 @@ import { aeldariData, aeldariEnhancements } from "./data/aeldari";
 import { rikiData, rikiEnhancements } from "./data/riki";
 import { Calculator } from "./Calculator";
 import { sororitasData, sororitasEnhancements } from "./data/sororitas";
+import { custoUnits, custoEnhancements } from "./data/custo";
+import { amUnits, amEnhancements } from "./data/am";
+import { astraUnits, astraEnhancements } from "./data/astra";
 
-// { id: number, name: string, models: number, points: number }
-// { id: number, name: string, points: number }
+// json schema Units: { id: number, name: string, models: number, points: number }
+// json schema Enhancements: { id: number, name: string, points: number }
 
 const router = createHashRouter([
   {
@@ -44,6 +47,36 @@ const router = createHashRouter([
         units={sororitasData}
         enhancements={sororitasEnhancements}
         title="ADEPTA SORORITAS"
+      />
+    ),
+  },
+  {
+    path: "/custo",
+    element: (
+      <Calculator
+        units={custoUnits}
+        enhancements={custoEnhancements}
+        title="ADEPTUS CUSTODES"
+      />
+    ),
+  },
+  {
+    path: "/astra",
+    element: (
+      <Calculator
+        units={astraUnits}
+        enhancements={astraEnhancements}
+        title="ASTRA MILITARUM"
+      />
+    ),
+  },
+  {
+    path: "/am",
+    element: (
+      <Calculator
+        units={amUnits}
+        enhancements={amEnhancements}
+        title="ADEPTUS MECHANICUS"
       />
     ),
   },

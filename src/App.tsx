@@ -41,6 +41,27 @@ export default function App() {
           >
             Riki
           </Button>
+          <Button
+            sx={{ m: 2 }}
+            variant="contained"
+            onClick={() => navigate("/custo")}
+          >
+            Custodes
+          </Button>
+          <Button
+            sx={{ m: 2 }}
+            variant="contained"
+            onClick={() => navigate("/astra")}
+          >
+            Astra Militarum
+          </Button>
+          <Button
+            sx={{ m: 2 }}
+            variant="contained"
+            onClick={() => navigate("/am")}
+          >
+            Admech
+          </Button>
         </Paper>
       </Grid>
     </Grid>
