@@ -1,19 +1,61 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { aeldariData, aeldariEnhancements } from "./data/aeldari";
+import { rikiData, rikiEnhancements } from "./data/riki";
+import { Calculator } from "./Calculator";
+import { sororitasData, sororitasEnhancements } from "./data/sororitas";
+
+// { id: number, name: string, models: number, points: number }
+// { id: number, name: string, points: number }
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+  },
+  {
+    path: "/cwe",
+    element: (
+      <Calculator
+        units={aeldariData}
+        enhancements={aeldariEnhancements}
+        title="AELDARI"
+      />
+    ),
+  },
+  {
+    path: "/riki",
+    element: (
+      <Calculator
+        units={rikiData}
+        enhancements={rikiEnhancements}
+        title="CHAOS KNIGHTS"
+      />
+    ),
+  },
+  {
+    path: "/sisters",
+    element: (
+      <Calculator
+        units={sororitasData}
+        enhancements={sororitasEnhancements}
+        title="ADEPTA SORORITAS"
+      />
+    ),
+  },
+]);
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

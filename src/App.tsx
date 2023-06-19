@@ -1,26 +1,48 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Grid from "@mui/material/Unstable_Grid2/Grid2";
+import { useForm, SubmitHandler } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+import { Paper, TextField, Button, AppBar } from "@mui/material";
 
-function App() {
+type Inputs = {
+  example: string;
+  exampleRequired: string;
+};
+
+export default function App() {
+  const navigate = useNavigate();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Grid
+      container
+      justifyContent="center"
+      alignItems="center"
+      sx={{ height: "100vh" }}
+    >
+      <Grid xs={10}>
+        <Paper elevation={3} sx={{ p: 4, height: "100vh" }}>
+          <Button
+            sx={{ m: 2 }}
+            variant="contained"
+            onClick={() => navigate("/cwe")}
+          >
+            Aeldari
+          </Button>
+          <Button
+            sx={{ m: 2 }}
+            variant="contained"
+            onClick={() => navigate("/sisters")}
+          >
+            Sororitas
+          </Button>
+          <Button
+            sx={{ m: 2 }}
+            variant="contained"
+            onClick={() => navigate("/riki")}
+          >
+            Riki
+          </Button>
+        </Paper>
+      </Grid>
+    </Grid>
   );
 }
-
-export default App;
