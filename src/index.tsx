@@ -17,6 +17,10 @@ import {
 } from "./data/blackTemplars";
 import { bloodAngelsUnits, bloodAnglesEnhancements } from "./data/bloodAngles";
 import { chaosDaemonsEnhancements, chaosDaemonsUnits } from "./data/danonki";
+import { csmEnhancements, csmUnits } from "./data/csm";
+import { drukhariEnhancements, drukhariUnits } from "./data/drukhari";
+import { daEnhancements, daUnits } from "./data/da";
+import { deathWatchEnhancements, deathWatchUnits } from "./data/deathWatch";
 
 // json schema Units: { id: number, name: string, models: number, points: number }
 // json schema Enhancements: { id: number, name: string, points: number }
@@ -113,6 +117,46 @@ const router = createHashRouter([
         units={chaosDaemonsUnits}
         enhancements={chaosDaemonsEnhancements}
         title="CHAOS DAEMONS"
+      />
+    ),
+  },
+  {
+    path: "/csm",
+    element: (
+      <Calculator
+        units={csmUnits}
+        enhancements={csmEnhancements}
+        title="CHAOS SPACE MARINES"
+      />
+    ),
+  },
+  {
+    path: "/drukhari",
+    element: (
+      <Calculator
+        units={drukhariUnits}
+        enhancements={drukhariEnhancements}
+        title="DRUKHARI"
+      />
+    ),
+  },
+  {
+    path: "/sm_da",
+    element: (
+      <Calculator
+        units={daUnits}
+        enhancements={daEnhancements}
+        title="DARK ANGELS"
+      />
+    ),
+  },
+  {
+    path: "/sm_dw",
+    element: (
+      <Calculator
+        units={deathWatchUnits}
+        enhancements={deathWatchEnhancements}
+        title="DEATHWATCH"
       />
     ),
   },

@@ -83,6 +83,34 @@ export default function App() {
           >
             Daemons
           </Button>
+          <Button
+            sx={{ m: 2 }}
+            variant="contained"
+            onClick={() => navigate("/csm")}
+          >
+            CSM
+          </Button>
+          <Button
+            sx={{ m: 2 }}
+            variant="contained"
+            onClick={() => navigate("/drukhari")}
+          >
+            Drukhari
+          </Button>
+          <Button
+            sx={{ m: 2 }}
+            variant="contained"
+            onClick={() => navigate("/sm_da")}
+          >
+            Dark Angels
+          </Button>
+          <Button
+            sx={{ m: 2 }}
+            variant="contained"
+            onClick={() => navigate("/sm_dw")}
+          >
+            Death Watch
+          </Button>
         </Paper>
       </Grid>
     </Grid>
