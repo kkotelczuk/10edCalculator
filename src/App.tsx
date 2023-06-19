@@ -62,6 +62,27 @@ export default function App() {
           >
             Admech
           </Button>
+          <Button
+            sx={{ m: 2 }}
+            variant="contained"
+            onClick={() => navigate("/sm_bt")}
+          >
+            Black Templars
+          </Button>
+          <Button
+            sx={{ m: 2 }}
+            variant="contained"
+            onClick={() => navigate("/sm_ba")}
+          >
+            Blood Angels
+          </Button>
+          <Button
+            sx={{ m: 2 }}
+            variant="contained"
+            onClick={() => navigate("/chaos_daemons")}
+          >
+            Daemons
+          </Button>
         </Paper>
       </Grid>
     </Grid>
