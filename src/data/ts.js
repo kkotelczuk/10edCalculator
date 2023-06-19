@@ -103,7 +103,7 @@ export const tsUnits = [
   },
   {
     id: 18,
-    name: "Thousand Sons Sorcerer",
+    name: "Thousand Sons Sorcerer in Terminator Armour",
     models: 1,
     points: 105,
   },
@@ -140,7 +140,7 @@ export const tsUnits = [
   {
     id: 24,
     name: "Tzaangors",
-    " models": 20,
+    models: 20,
     points: 130,
   },
   {
