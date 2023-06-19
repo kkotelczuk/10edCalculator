@@ -2,6 +2,7 @@ import {
   Button,
   FormControl,
   InputLabel,
+  ListSubheader,
   MenuItem,
   Select,
   TextField,
@@ -41,26 +42,42 @@ export const Calculator = ({
   };
 
   const getMenuItems = () => {
-    return units.map((item: any) => (
-      <MenuItem
-        key={item.id}
-        value={item.id}
-      >{`${item.models} ${item.name} [${item.points}pts]`}</MenuItem>
-    ));
+    let category = "";
+    return units
+      .sort((a: any, b: any) => a?.category - b?.category)
+      .map((item: any) => {
+        if (item?.category !== category) {
+          category = item.category;
+          return <ListSubheader>{item.category}</ListSubheader>;
+        }
+        return (
+          <MenuItem
+            key={item.id}
+            value={item.id}
+          >{`${item.models} ${item.name} [${item.points}pts]`}</MenuItem>
+        );
+      });
   };
 
   const getEnhancementItems = () => {
-    return enhancements.map((item: any) => {
-      const isItemUsed = usedEnhanced.find(
-        (enhancement) => enhancement === item.id
-      );
-      if (!isItemUsed)
-        return (
-          <MenuItem key={item.id} value={item.id}>
-            {`${item.name} [${item.points}pts]`}
-          </MenuItem>
+    let category = "";
+    return enhancements
+      .sort((a: any, b: any) => a?.category - b?.category)
+      .map((item: any) => {
+        if (item?.category !== category) {
+          category = item.category;
+          return <ListSubheader>{item.category}</ListSubheader>;
+        }
+        const isItemUsed = usedEnhanced.find(
+          (enhancement) => enhancement === item.id
         );
-    });
+        if (!isItemUsed)
+          return (
+            <MenuItem key={item.id} value={item.id}>
+              {`${item.name} [${item.points}pts]`}
+            </MenuItem>
+          );
+      });
   };
 
   const handleAddUnit = (id: any) => {

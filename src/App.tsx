@@ -122,6 +122,10 @@ export default function App() {
       <MenuButton variant="contained" onClick={() => navigate("/sm_agents")}>
         Agents
       </MenuButton>
+
+      <MenuButton variant="contained" onClick={() => navigate("/mix")}>
+        Mix Armies
+      </MenuButton>
     </Grid>
   );
 }

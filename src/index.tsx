@@ -1,12 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { createHashRouter, RouterProvider } from "react-router-dom";
+import { MultipleSelect } from "./MulipleSelect";
+import { Calculator } from "./Calculator";
 import { aeldariData, aeldariEnhancements } from "./data/aeldari";
 import { rikiData, rikiEnhancements } from "./data/riki";
-import { Calculator } from "./Calculator";
 import { sororitasData, sororitasEnhancements } from "./data/sororitas";
 import { custoUnits, custoEnhancements } from "./data/custo";
 import { amUnits, amEnhancements } from "./data/am";
@@ -313,6 +314,10 @@ const router = createHashRouter([
         title="DEATH GUARD"
       />
     ),
+  },
+  {
+    path: "/mix",
+    element: <MultipleSelect />,
   },
 ]);
 
