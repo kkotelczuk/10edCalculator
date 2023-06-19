@@ -1,0 +1,193 @@
+export const weUnits = [
+  {
+    id: 1,
+    name: "Angron",
+    models: 1,
+    points: 415,
+  },
+  {
+    id: 2,
+    name: "Eightbound",
+    models: 3,
+    points: 155,
+  },
+  {
+    id: 3,
+    name: "Eightbound",
+    models: 6,
+    points: 310,
+  },
+  {
+    id: 4,
+    name: "Exalted Eightbound",
+    models: 3,
+    points: 180,
+  },
+  {
+    id: 5,
+    name: "Exalted Eightbound",
+    models: 6,
+    points: 360,
+  },
+  {
+    id: 6,
+    name: "Jakhals",
+    models: 10,
+    points: 75,
+  },
+  {
+    id: 7,
+    name: "Jakhals",
+    models: 20,
+    points: 150,
+  },
+  {
+    id: 8,
+    name: "Khorne Berzerkers",
+    models: 5,
+    points: 115,
+  },
+  {
+    id: 9,
+    name: "Khorne Berzerkers",
+    models: 10,
+    points: 230,
+  },
+  {
+    id: 10,
+    name: "Khorne Lord of Skulls",
+    models: 1,
+    points: 420,
+  },
+  {
+    id: 11,
+    name: "Khârn the Betrayer",
+    models: 1,
+    points: 95,
+  },
+  {
+    id: 12,
+    name: "Lord Invocatus",
+    models: 1,
+    points: 155,
+  },
+  {
+    id: 13,
+    name: "World Eaters Chaos Spawn",
+    models: 2,
+    points: 65,
+  },
+  {
+    id: 14,
+    name: "World Eaters Daemon Prince",
+    models: 1,
+    points: 220,
+  },
+  {
+    id: 15,
+    name: "World Eaters Daemon Prince with Wings",
+    models: 1,
+    points: 215,
+  },
+  {
+    id: 16,
+    name: "World Eaters Defiler",
+    models: 1,
+    points: 210,
+  },
+  {
+    id: 17,
+    name: "World Eaters Forgefiend",
+    models: 1,
+    points: 150,
+  },
+  {
+    id: 18,
+    name: "World Eaters Helbrute",
+    models: 1,
+    points: 150,
+  },
+  {
+    id: 19,
+    name: "World Eaters Heldrake",
+    models: 1,
+    points: 215,
+  },
+  {
+    id: 20,
+    name: "World Eaters Land Raider",
+    models: 1,
+    points: 255,
+  },
+  {
+    id: 21,
+    name: "World Eaters Lord on Juggernaut",
+    models: 1,
+    points: 120,
+  },
+  {
+    id: 22,
+    name: "World Eaters Master of Executions",
+    models: 1,
+    points: 80,
+  },
+  {
+    id: 23,
+    name: "World Eaters Maulerfiend",
+    models: 1,
+    points: 175,
+  },
+  {
+    id: 24,
+    name: "World Eaters Predator Annihilator",
+    models: 1,
+    points: 130,
+  },
+  {
+    id: 25,
+    name: "World Eaters Predator Destructor",
+    models: 1,
+    points: 130,
+  },
+  {
+    id: 26,
+    name: "World Eaters Rhino",
+    models: 1,
+    points: 85,
+  },
+  {
+    id: 27,
+    name: "World Eaters Terminator Squad",
+    models: 5,
+    points: 195,
+  },
+  {
+    id: 28,
+    name: "World Eaters Terminator Squad",
+    models: 10,
+    points: 390,
+  },
+];
+
+export const weEnhancements = [
+  {
+    id: 1,
+    name: "Battle-lust",
+    points: 15,
+  },
+  {
+    id: 2,
+    name: "Berzerker Glaive",
+    points: 25,
+  },
+  {
+    id: 3,
+    name: "Favoured of Khorne",
+    points: 30,
+  },
+  {
+    id: 4,
+    name: "Helm of Brazen Ire",
+    points: 25,
+  },
+];

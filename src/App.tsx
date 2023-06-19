@@ -111,6 +111,117 @@ export default function App() {
           >
             Death Watch
           </Button>
+          <Button
+            sx={{ m: 2 }}
+            variant="contained"
+            onClick={() => navigate("/sm")}
+          >
+            Space Marines
+          </Button>
+
+          <Button
+            sx={{ m: 2 }}
+            variant="contained"
+            onClick={() => navigate("/we")}
+          >
+            World Eaters
+          </Button>
+
+          <Button
+            sx={{ m: 2 }}
+            variant="contained"
+            onClick={() => navigate("/votann")}
+          >
+            Votann
+          </Button>
+
+          <Button
+            sx={{ m: 2 }}
+            variant="contained"
+            onClick={() => navigate("/tyranids")}
+          >
+            Tyranids
+          </Button>
+
+          <Button
+            sx={{ m: 2 }}
+            variant="contained"
+            onClick={() => navigate("/ts")}
+          >
+            TS
+          </Button>
+
+          <Button
+            sx={{ m: 2 }}
+            variant="contained"
+            onClick={() => navigate("/tau")}
+          >
+            Tau
+          </Button>
+
+          <Button
+            sx={{ m: 2 }}
+            variant="contained"
+            onClick={() => navigate("/sm_sw")}
+          >
+            Space Wolves
+          </Button>
+
+          <Button
+            sx={{ m: 2 }}
+            variant="contained"
+            onClick={() => navigate("/orks")}
+          >
+            Orks
+          </Button>
+
+          <Button
+            sx={{ m: 2 }}
+            variant="contained"
+            onClick={() => navigate("/necrons")}
+          >
+            Necrons
+          </Button>
+
+          <Button
+            sx={{ m: 2 }}
+            variant="contained"
+            onClick={() => navigate("/ik")}
+          >
+            IK
+          </Button>
+
+          <Button
+            sx={{ m: 2 }}
+            variant="contained"
+            onClick={() => navigate("/gsc")}
+          >
+            GSC
+          </Button>
+
+          <Button
+            sx={{ m: 2 }}
+            variant="contained"
+            onClick={() => navigate("/sm_gk")}
+          >
+            GK
+          </Button>
+
+          <Button
+            sx={{ m: 2 }}
+            variant="contained"
+            onClick={() => navigate("/dg")}
+          >
+            DG
+          </Button>
+
+          <Button
+            sx={{ m: 2 }}
+            variant="contained"
+            onClick={() => navigate("/sm_agents")}
+          >
+            Agents
+          </Button>
         </Paper>
       </Grid>
     </Grid>
