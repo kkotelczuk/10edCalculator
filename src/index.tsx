@@ -3,7 +3,11 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  createHashRouter,
+  RouterProvider,
+} from "react-router-dom";
 import { aeldariData, aeldariEnhancements } from "./data/aeldari";
 import { rikiData, rikiEnhancements } from "./data/riki";
 import { Calculator } from "./Calculator";
@@ -12,7 +16,7 @@ import { sororitasData, sororitasEnhancements } from "./data/sororitas";
 // { id: number, name: string, models: number, points: number }
 // { id: number, name: string, points: number }
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <App />,
