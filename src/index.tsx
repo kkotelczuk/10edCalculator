@@ -12,47 +12,42 @@ import { sororitasData, sororitasEnhancements } from "./data/sororitas";
 // { id: number, name: string, models: number, points: number }
 // { id: number, name: string, points: number }
 
-const router = createHashRouter(
-  [
-    {
-      path: "/",
-      element: <App />,
-    },
-    {
-      path: "/cwe",
-      element: (
-        <Calculator
-          units={aeldariData}
-          enhancements={aeldariEnhancements}
-          title="AELDARI"
-        />
-      ),
-    },
-    {
-      path: "/riki",
-      element: (
-        <Calculator
-          units={rikiData}
-          enhancements={rikiEnhancements}
-          title="CHAOS KNIGHTS"
-        />
-      ),
-    },
-    {
-      path: "/sisters",
-      element: (
-        <Calculator
-          units={sororitasData}
-          enhancements={sororitasEnhancements}
-          title="ADEPTA SORORITAS"
-        />
-      ),
-    },
-  ],
+const router = createHashRouter([
   {
-    basename: "/index.html",
-  }
-);
+    path: "/",
+    element: <App />,
+  },
+  {
+    path: "/cwe",
+    element: (
+      <Calculator
+        units={aeldariData}
+        enhancements={aeldariEnhancements}
+        title="AELDARI"
+      />
+    ),
+  },
+  {
+    path: "/riki",
+    element: (
+      <Calculator
+        units={rikiData}
+        enhancements={rikiEnhancements}
+        title="CHAOS KNIGHTS"
+      />
+    ),
+  },
+  {
+    path: "/sisters",
+    element: (
+      <Calculator
+        units={sororitasData}
+        enhancements={sororitasEnhancements}
+        title="ADEPTA SORORITAS"
+      />
+    ),
+  },
+]);
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
