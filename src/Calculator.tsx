@@ -24,7 +24,7 @@ export const Calculator = ({
   units: any;
   title: string;
 }) => {
-  const [rooster, setRooster] = React.useState<any[]>([]);
+  const [roster, setRoster] = React.useState<any[]>([]);
   const [unitId, setUnitId] = React.useState("");
   const [enhancementId, setEnhancementId] = React.useState("");
   const [usedEnhanced, setUsedEnhanced] = React.useState<any[]>([]);
@@ -33,7 +33,7 @@ export const Calculator = ({
   const navigate = useNavigate();
 
   const reset = () => {
-    setRooster([]);
+    setRoster([]);
     setUnitId("");
     setEnhancementId("");
     setUsedEnhanced([]);
@@ -86,21 +86,21 @@ export const Calculator = ({
 
   const handleAddUnit = (id: any) => {
     if (+id > 0) {
-      const roosterCopy = [...rooster];
+      const rosterCopy = [...roster];
       const unit = units.find((item: any) => item.id === id);
       const enhancement = enhancements.find(
         (enhancement: any) => enhancement.id === +enhancementId
       );
       const overallCost = (unit?.points ?? 0) + (enhancement?.points ?? 0);
 
-      setRooster([
-        ...roosterCopy,
+      setRoster([
+        ...rosterCopy,
         {
           ...unit,
           points: overallCost,
           enhancementId,
           enhancementName: enhancement?.name,
-          roosterUnitId: uuidv4(),
+          rosterUnitId: uuidv4(),
           unitOptions,
         },
       ]);
@@ -112,9 +112,9 @@ export const Calculator = ({
   };
 
   const removeUnit = (uuid: any) => {
-    const index = rooster.findIndex((item) => item.roosterUnitId === uuid);
+    const index = roster.findIndex((item) => item.rosterUnitId === uuid);
     if (index !== -1) {
-      const unit = rooster[index];
+      const unit = roster[index];
       if (+unit.enhancementId > 0) {
         const usedEnhancementIndex = usedEnhanced.findIndex(
           (id) => id === +unit.enhancementId
@@ -123,9 +123,9 @@ export const Calculator = ({
         usedEnhancedCopy.splice(usedEnhancementIndex, 1);
         setUsedEnhanced(usedEnhancedCopy);
       }
-      const roosterCopy = [...rooster];
-      roosterCopy.splice(index, 1);
-      setRooster(roosterCopy);
+      const rosterCopy = [...roster];
+      rosterCopy.splice(index, 1);
+      setRoster(rosterCopy);
     }
   };
 
@@ -151,7 +151,7 @@ export const Calculator = ({
           {`[${unit?.points}pts]`}
         </Grid>
         <Grid xs={2} md={1}>
-          <Button onClick={() => removeUnit(unit.roosterUnitId)}>Remove</Button>
+          <Button onClick={() => removeUnit(unit.rosterUnitId)}>Remove</Button>
         </Grid>
         <Grid xs={1} md={4}></Grid>
         <Grid xs={2}></Grid>
@@ -168,11 +168,11 @@ export const Calculator = ({
   };
 
   React.useEffect(() => {
-    const unitPoints = rooster.reduce((acc: number, item: any) => {
+    const unitPoints = roster.reduce((acc: number, item: any) => {
       return (acc += item.points);
     }, 0);
     setPoints(unitPoints);
-  }, [rooster]);
+  }, [roster]);
 
   return (
     <Grid container justifyContent="center" alignItems="center">
@@ -234,18 +234,18 @@ export const Calculator = ({
         </Button>
       </Grid>
       <Grid xs={12} mb={3} ml={2}>
-        <Typography variant="h5">Rooster:</Typography>
+        <Typography variant="h5">Roster:</Typography>
       </Grid>
       <Grid xs={12} mb={3}>
-        {rooster.map((unit) => (
-          <UnitRow unit={unit} key={unit.roosterUnitId} />
+        {roster.map((unit) => (
+          <UnitRow unit={unit} key={unit.rosterUnitId} />
         ))}
       </Grid>
       <Grid xs={12} md={4}>
-        <Typography>Rooster Text: </Typography>
+        <Typography>Roster Text: </Typography>
       </Grid>
       <Grid xs={12} md={8}>
-        <RoosterFormatter rooster={rooster} />
+        <RoosterFormatter rooster={roster} />
       </Grid>
     </Grid>
   );
