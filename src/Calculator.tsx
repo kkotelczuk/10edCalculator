@@ -1,4 +1,5 @@
 import {
+  Autocomplete,
   Button,
   FormControl,
   InputLabel,
@@ -186,18 +187,19 @@ export const Calculator = ({
         <Typography variant="h3">{`${title} - ${points}/2000`}</Typography>
       </Grid>
       <Grid xs={12} md={4}>
-        <FormControl sx={{ m: 1, width: "90%" }}>
-          <InputLabel id="label-unit">UNIT</InputLabel>
-          <Select
-            labelId="label-unit"
-            id="unit"
-            label="Unit"
-            value={unitId}
-            onChange={(e) => setUnitId(e.target.value)}
-          >
-            {getMenuItems()}
-          </Select>
-        </FormControl>
+        <Autocomplete
+          id="grouped-units"
+          options={units.sort((a: any, b: any) => a?.category - b?.category)}
+          groupBy={(option: any) => option?.category}
+          getOptionLabel={(item) =>
+            `${item.models} ${item.name} [${item.points}pts]`
+          }
+          onChange={(event: any, newValue: any) => {
+            setUnitId(newValue?.id ?? 0);
+          }}
+          renderInput={(params) => <TextField {...params} label="Units" />}
+          sx={{ m: 1, width: "90%" }}
+        />
       </Grid>
       <Grid xs={12} md={4}>
         <FormControl sx={{ m: 1, width: "90%" }}>

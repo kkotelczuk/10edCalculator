@@ -62,9 +62,14 @@ const armies = [
   { id: 27, name: "World Eaters", checked: false },
 ];
 
-const concatArrays = (base: any, addition: any, category: string) => {
+const concatArrays = (
+  base: any,
+  addition: any,
+  category: string,
+  isEnhancement?: boolean
+) => {
   const baseCopy = [...base];
-  baseCopy.push({ id: "category", category });
+  isEnhancement && baseCopy.push({ id: "category", category });
   return baseCopy.concat(
     addition.map((item: any) => ({
       ...item,
@@ -109,7 +114,8 @@ export const MultipleSelect = () => {
             selectedArmiesEnhancements = concatArrays(
               selectedArmiesEnhancements,
               sororitasEnhancements,
-              element.name
+              element.name,
+              true
             );
             break;
           case 2:
@@ -121,7 +127,8 @@ export const MultipleSelect = () => {
             selectedArmiesEnhancements = concatArrays(
               selectedArmiesEnhancements,
               custoEnhancements,
-              element.name
+              element.name,
+              true
             );
             break;
           case 3:
@@ -133,7 +140,8 @@ export const MultipleSelect = () => {
             selectedArmiesEnhancements = concatArrays(
               selectedArmiesEnhancements,
               amEnhancements,
-              element.name
+              element.name,
+              true
             );
             break;
           case 4:
@@ -145,7 +153,8 @@ export const MultipleSelect = () => {
             selectedArmiesEnhancements = concatArrays(
               selectedArmiesEnhancements,
               astraEnhancements,
-              element.name
+              element.name,
+              true
             );
             break;
           case 5:
@@ -157,7 +166,8 @@ export const MultipleSelect = () => {
             selectedArmiesEnhancements = concatArrays(
               selectedArmiesEnhancements,
               bloodAnglesEnhancements,
-              element.name
+              element.name,
+              true
             );
             break;
           case 6:
@@ -169,7 +179,8 @@ export const MultipleSelect = () => {
             selectedArmiesEnhancements = concatArrays(
               selectedArmiesEnhancements,
               chaosDaemonsEnhancements,
-              element.name
+              element.name,
+              true
             );
             break;
           case 7:
@@ -181,7 +192,8 @@ export const MultipleSelect = () => {
             selectedArmiesEnhancements = concatArrays(
               selectedArmiesEnhancements,
               rikiEnhancements,
-              element.name
+              element.name,
+              true
             );
             break;
           case 8:
@@ -193,7 +205,8 @@ export const MultipleSelect = () => {
             selectedArmiesEnhancements = concatArrays(
               selectedArmiesEnhancements,
               csmEnhancements,
-              element.name
+              element.name,
+              true
             );
             break;
           case 9:
@@ -205,7 +218,8 @@ export const MultipleSelect = () => {
             selectedArmiesEnhancements = concatArrays(
               selectedArmiesEnhancements,
               aeldariEnhancements,
-              element.name
+              element.name,
+              true
             );
             break;
           case 10:
@@ -217,7 +231,8 @@ export const MultipleSelect = () => {
             selectedArmiesEnhancements = concatArrays(
               selectedArmiesEnhancements,
               daEnhancements,
-              element.name
+              element.name,
+              true
             );
             break;
           case 11:
@@ -229,7 +244,8 @@ export const MultipleSelect = () => {
             selectedArmiesEnhancements = concatArrays(
               selectedArmiesEnhancements,
               dgEnhancements,
-              element.name
+              element.name,
+              true
             );
             break;
           case 12:
@@ -241,7 +257,8 @@ export const MultipleSelect = () => {
             selectedArmiesEnhancements = concatArrays(
               selectedArmiesEnhancements,
               deathWatchEnhancements,
-              element.name
+              element.name,
+              true
             );
             break;
           case 13:
@@ -253,7 +270,8 @@ export const MultipleSelect = () => {
             selectedArmiesEnhancements = concatArrays(
               selectedArmiesEnhancements,
               drukhariEnhancements,
-              element.name
+              element.name,
+              true
             );
             break;
           case 14:
@@ -265,7 +283,8 @@ export const MultipleSelect = () => {
             selectedArmiesEnhancements = concatArrays(
               selectedArmiesEnhancements,
               gsxEnhancements,
-              element.name
+              element.name,
+              true
             );
             break;
           case 15:
@@ -277,7 +296,8 @@ export const MultipleSelect = () => {
             selectedArmiesEnhancements = concatArrays(
               selectedArmiesEnhancements,
               gkEnhancements,
-              element.name
+              element.name,
+              true
             );
             break;
           case 16:
@@ -289,7 +309,8 @@ export const MultipleSelect = () => {
             selectedArmiesEnhancements = concatArrays(
               selectedArmiesEnhancements,
               ikEnhancements,
-              element.name
+              element.name,
+              true
             );
             break;
           case 17:
@@ -301,7 +322,8 @@ export const MultipleSelect = () => {
             selectedArmiesEnhancements = concatArrays(
               selectedArmiesEnhancements,
               necronsEnhancements,
-              element.name
+              element.name,
+              true
             );
             break;
           case 18:
@@ -313,7 +335,8 @@ export const MultipleSelect = () => {
             selectedArmiesEnhancements = concatArrays(
               selectedArmiesEnhancements,
               agnetsEnhancements,
-              element.name
+              element.name,
+              true
             );
             break;
           case 19:
@@ -325,7 +348,8 @@ export const MultipleSelect = () => {
             selectedArmiesEnhancements = concatArrays(
               selectedArmiesEnhancements,
               orksEnhancements,
-              element.name
+              element.name,
+              true
             );
             break;
           case 20:
@@ -337,7 +361,8 @@ export const MultipleSelect = () => {
             selectedArmiesEnhancements = concatArrays(
               selectedArmiesEnhancements,
               smEnhancements,
-              element.name
+              element.name,
+              true
             );
             break;
           case 21:
@@ -349,7 +374,8 @@ export const MultipleSelect = () => {
             selectedArmiesEnhancements = concatArrays(
               selectedArmiesEnhancements,
               spaceWolvesEnhancements,
-              element.name
+              element.name,
+              true
             );
             break;
           case 22:
@@ -361,7 +387,8 @@ export const MultipleSelect = () => {
             selectedArmiesEnhancements = concatArrays(
               selectedArmiesEnhancements,
               tauEnhancements,
-              element.name
+              element.name,
+              true
             );
             break;
           case 23:
@@ -373,7 +400,8 @@ export const MultipleSelect = () => {
             selectedArmiesEnhancements = concatArrays(
               selectedArmiesEnhancements,
               tsEnhancements,
-              element.name
+              element.name,
+              true
             );
             break;
           case 24:
@@ -385,7 +413,8 @@ export const MultipleSelect = () => {
             selectedArmiesEnhancements = concatArrays(
               selectedArmiesEnhancements,
               tyranidsEnhancements,
-              element.name
+              element.name,
+              true
             );
             break;
           case 25:
@@ -397,7 +426,8 @@ export const MultipleSelect = () => {
             selectedArmiesEnhancements = concatArrays(
               selectedArmiesEnhancements,
               votannEnhancements,
-              element.name
+              element.name,
+              true
             );
             break;
           case 26:
@@ -409,7 +439,8 @@ export const MultipleSelect = () => {
             selectedArmiesEnhancements = concatArrays(
               selectedArmiesEnhancements,
               blackTemplarEnhancements,
-              element.name
+              element.name,
+              true
             );
             break;
           case 27:
@@ -421,7 +452,8 @@ export const MultipleSelect = () => {
             selectedArmiesEnhancements = concatArrays(
               selectedArmiesEnhancements,
               weEnhancements,
-              element.name
+              element.name,
+              true
             );
             break;
         }
